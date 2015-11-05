@@ -1,0 +1,30 @@
+{
+  "name": "csrf-meta-interceptor",
+  "version": "1.0.0",
+  "description": "A small and simple $http interceptor that reads a CSRF token from an html meta element named _csrf and sends the value as http header (name defined as html meta element named _csrf_header) when using POST, PUT or DELETE",
+  "main": "src/csrfMetaInterceptor.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ckatzorke/csrf-meta-interceptor.git"
+  },
+  "keywords": [
+    "csrf",
+    "spring",
+    "AngluarJS"
+  ],
+  "author": "Christian Katzorke <ckatzorke@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ckatzorke/csrf-meta-interceptor/issues"
+  },
+  "homepage": "https://github.com/ckatzorke/csrf-meta-interceptor#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.0.0",
+    "gulp-rimraf": "^0.2.0",
+    "gulp-uglify": "^1.4.2"
+  }
+}
