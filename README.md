@@ -8,6 +8,10 @@ Install it
 ```
 npm install csrf-meta-interceptor --save
 ```
+You can find the source in _node_modules/csrf-meta-interceptor/src/csrfMetaInterceptor.js'_ and the uglified version in _node_modules/csrf-meta-interceptor/dist/csrfMetaInterceptor.js'_. Load the source into your html, e.g.
+```
+<script src="node_modules/csrf-meta-interceptor/dist/csrfMetaInterceptor.js"></script>
+```
 
 Add interceptor as dependency
 ```
