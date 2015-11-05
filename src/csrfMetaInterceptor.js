@@ -28,6 +28,7 @@
                 // defined with 	 _csrf_header meta element value
                 var $document = $injector.get('$document');
                 var $log = $injector.get('$log');
+                var HTTP_METHODS = ['POST', 'PUT', 'DELETE'];
                 var getMetaElement = function(name) {
                     var meta = $document[0].head.children.namedItem(name);
                     if (meta === null) {
@@ -41,9 +42,12 @@
                 };
                 var _csrf_token = getMetaElement('_csrf').content;
                 var _csrf_header = getMetaElement('_csrf_header').content;
+                $log.debug('Using HTTP header ' + _csrf_header + ': ' + _csrf_token);
                 return {
                     'request': function(config) {
-                        config.headers[_csrf_header] = _csrf_token;
+                        if (HTTP_METHODS.indexOf(config.method.toUpperCase()) > -1) {
+                            config.headers[_csrf_header] = _csrf_token;
+                        }
                         return config;
                     }
                 };
