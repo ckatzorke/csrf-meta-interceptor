@@ -37,7 +37,6 @@ app.controller('CsrfCtrl', function ($scope, $http) {
 
 Possible enhancements include
 - tests
-- configuration of meta element names, instead of fixed values '_csrf' and '_csrf_header'
+- configuration of meta element names, instead of fixed values '\_csrf' and '\_csrf_header'
 - configuration of supported methods (currently fixed POST, PUT, DELETE)
-- optionally support for response headers, see https://github.com/aditzel/spring-security-csrf-token-interceptor
--
+- optionally support for response headers, see https://github.com/aditzel/spring-security-csrf-token-interceptor especially when generating new tokens after validation
