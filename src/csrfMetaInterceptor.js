@@ -31,7 +31,7 @@
                 var HTTP_METHODS = ['POST', 'PUT', 'DELETE'];
                 var getMetaElement = function(name) {
                     var meta = $document[0].head.children.namedItem(name);
-                    if (meta === null) {
+                    if (typeof meta === 'undefined' || meta === null) {
                         //fail  safe
                         $log.error('csrfMetaInterceptor cannot be initialized, meta element with name "' + name + '" is not available!');
                         meta = {
