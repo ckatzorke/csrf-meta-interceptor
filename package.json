@@ -1,6 +1,6 @@
 {
   "name": "csrf-meta-interceptor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small and simple $http interceptor that reads a CSRF token from an html meta element named _csrf and sends the value as http header (name defined as html meta element named _csrf_header) when using POST, PUT or DELETE",
   "main": "src/csrfMetaInterceptor.js",
   "scripts": {
